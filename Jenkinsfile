@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("auth-middleware")
+        sh '/space/es-master/build/build.sh'
     }
 
     /*stage('Test image') {
