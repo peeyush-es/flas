@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build & Test image via bash') {
-        sh '/space/es-master/build/build.sh'
+        sh '/space/es-master/exact-dev-build/auth-middleware/build.sh'
     }
 
     /*stage('Test run') {
