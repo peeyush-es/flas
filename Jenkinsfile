@@ -2,21 +2,16 @@ node {
     def app
 
     stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
-
         checkout scm
     }
 
     stage('Build & Test image via bash') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-
         sh '/space/es-master/build/build.sh'
     }
 
-    /*stage('Test image') {
+    /*stage('Test run') {
         app.inside {
-            sh 'echo "Tests passed"'
+            sh 'cd /tmp/ && python test.py'
         }
     }*/
     
